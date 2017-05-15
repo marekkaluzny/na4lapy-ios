@@ -70,6 +70,8 @@
 		DCEFCADC1E8FB97B007F8B16 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEFCADB1E8FB97B007F8B16 /* Resource.swift */; };
 		DCEFCADD1E8FB9D3007F8B16 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEFCADB1E8FB97B007F8B16 /* Resource.swift */; };
 		DCEFCADF1E8FFF5C007F8B16 /* SheltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEFCADE1E8FFF5C007F8B16 /* SheltersViewController.swift */; };
+		EA9887201EC8F0D50014C614 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA98871F1EC8F0D50014C614 /* OnboardingViewController.swift */; };
+		EA9887221EC8F1220014C614 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9887211EC8F1220014C614 /* Onboarding.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +155,8 @@
 		DCEFCAD91E8FB873007F8B16 /* ResourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceTests.swift; sourceTree = "<group>"; };
 		DCEFCADB1E8FB97B007F8B16 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		DCEFCADE1E8FFF5C007F8B16 /* SheltersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheltersViewController.swift; sourceTree = "<group>"; };
+		EA98871F1EC8F0D50014C614 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnboardingViewController.swift; path = Onboarding/OnboardingViewController.swift; sourceTree = "<group>"; };
+		EA9887211EC8F1220014C614 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Onboarding.storyboard; path = Onboarding/Onboarding.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +200,7 @@
 		047D444D1D396A8C00CF40FE /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				EA98871E1EC8F09A0014C614 /* Onboarding */,
 				DC22F0611DDB95540058C86A /* Favourite */,
 				0428194C1D854ABA00ECA3B9 /* PreferencesView */,
 				047D44501D396AF400CF40FE /* Common */,
@@ -372,6 +377,15 @@
 			name = Favourite;
 			sourceTree = "<group>";
 		};
+		EA98871E1EC8F09A0014C614 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				EA98871F1EC8F0D50014C614 /* OnboardingViewController.swift */,
+				EA9887211EC8F1220014C614 /* Onboarding.storyboard */,
+			);
+			name = Onboarding;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -426,6 +440,7 @@
 				5CCD46C71D04C6E600D2D672 /* Frameworks */,
 				5CCD46C81D04C6E600D2D672 /* Resources */,
 				05D4E6899FF410388BF4DBD4 /* [CP] Copy Pods Resources */,
+				FF6398514FA13813FDB4FB76 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -495,6 +510,7 @@
 				04E3081B1D44BCE400A822BF /* Localizable.strings in Resources */,
 				040BDF3E1D1F187100A46FB1 /* Localizable.stringsdict in Resources */,
 				5CCD46B61D04C6E600D2D672 /* Assets.xcassets in Resources */,
+				EA9887221EC8F1220014C614 /* Onboarding.storyboard in Resources */,
 				5CCD46B41D04C6E600D2D672 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -616,7 +632,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		80F49BC5EEF6EB3BE5D05924 /* [CP] Check Pods Manifest.lock */ = {
@@ -631,7 +647,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		817E3847602E70C1381DF5DB /* [CP] Check Pods Manifest.lock */ = {
@@ -646,7 +662,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FF6398514FA13813FDB4FB76 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Na4ŁapyUITests/Pods-Na4ŁapyUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -666,6 +697,7 @@
 				5CCD46AF1D04C6E600D2D672 /* AppDelegate.swift in Sources */,
 				04CCB0AA1D43F74800BCE06B /* AnimalFeatureTableCell.swift in Sources */,
 				DCEFCADC1E8FB97B007F8B16 /* Resource.swift in Sources */,
+				EA9887201EC8F0D50014C614 /* OnboardingViewController.swift in Sources */,
 				DCEFCADF1E8FFF5C007F8B16 /* SheltersViewController.swift in Sources */,
 				5C6821731D061B5C00FA7781 /* Animal.swift in Sources */,
 				04235BE21D8DB2260097353B /* URLBuildable.swift in Sources */,
@@ -802,7 +834,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_SWIFT_FLAGS = "-DDEBUG";
@@ -845,7 +877,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_SWIFT_FLAGS = "-DRELEASE";
 				SDKROOT = iphoneos;
@@ -865,13 +897,14 @@
 				DEVELOPMENT_TEAM = Y775T2M4TH;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = "Na4Łapy/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stowarzyszenie.Na4lapy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "13056364-9f85-4a66-bdcf-c4e3906d8122";
 				PROVISIONING_PROFILE_SPECIFIER = WojtekDev;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -886,7 +919,7 @@
 				DEVELOPMENT_TEAM = "";
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = "Na4Łapy/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stowarzyszenie.Na4lapy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -894,6 +927,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

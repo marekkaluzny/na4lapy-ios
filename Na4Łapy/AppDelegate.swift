@@ -19,7 +19,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().barTintColor = UIColor(red:0.00, green:0.41, blue:0.45, alpha:1.00)
         UINavigationBar.appearance().barStyle = UIBarStyle.black
-
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        // Load Main App Screen
+        
+        let mainVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController()
+        let onboardingVC = UIStoryboard.init(name: "Onboarding", bundle: nil).instantiateInitialViewController()
+        
+        let appWasLaunchedBefore = UserDefaults.standard.bool(forKey:"launchedBefore")
+        if appWasLaunchedBefore {
+            window?.rootViewController = mainVC
+        } else {
+            window?.rootViewController = onboardingVC
+        }
+        
+        window?.makeKeyAndVisible()
+        
         setAnimalPreferencesStartingState()
 
         return true
