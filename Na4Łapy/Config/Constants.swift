@@ -201,3 +201,6 @@ let PREFERENCES = [
 
 // MARK: ErrorDomain dla NSError
 let errorDomain = "Na4Łapy"
+
+// MARK: Seque name
+let OnboardingContinueSegue = "ShowApp"

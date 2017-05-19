@@ -21,12 +21,6 @@ class OnboardingViewController: UIViewController {
         swiftyOnboard.dataSource = self
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        let appWasLaunchedBefore = UserDefaults.standard.bool(forKey:"launchedBefore")
-//        if appWasLaunchedBefore {
-//            self.performSegue(withIdentifier: OnboardingContinueSegue, sender: self)
-//        }
-//    }
     func handleSkip() {
         self.swiftyOnboard.goToPage(index: 4, animated: true)
     }
@@ -49,32 +43,37 @@ extension OnboardingViewController: SwiftyOnboardDelegate, SwiftyOnboardDataSour
     }
     
     func swiftyOnboardPageForIndex(swiftyOnboard: SwiftyOnboard, index: Int) -> SwiftyOnboardPage? {
-        let page = SwiftyOnboardPage()
+        let page = OnboardingPage.instanceFromNib() as? OnboardingPage
         switch index {
         case 0:
-            page.title.isHidden = true
-            page.subTitle.text = "Poszukiwanie czworonożnego przyjaciela bywa trudne"
-            page.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+            page?.titleLabel.text = " "
+            page?.subTitleLabel.text = "Poszukiwanie czworonożnego przyjaciela bywa trudne"
+            page?.image.image = UIImage(named: "OnboardingA", in: Bundle(for: type(of: self)), compatibleWith: nil)
+            page?.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
             break;
         case 1:
-            page.title.isHidden = true
-            page.subTitle.text = "Określ swoje potrzeby"
-            page.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+            page?.titleLabel.text = " "
+            page?.subTitleLabel.text = "Określ swoje potrzeby"
+            page?.image.image = UIImage(named: "OnboardingB", in: Bundle(for: type(of: self)), compatibleWith: nil)
+            page?.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
             break;
         case 2:
-            page.title.isHidden = true
-            page.subTitle.text = "Przeszukaj listę zwierząt poszukujących człowieka"
-            page.backgroundColor = #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)
+            page?.titleLabel.text = " "
+            page?.subTitleLabel.text = "Przeszukaj listę zwierząt poszukujących człowieka"
+            page?.image.image = UIImage(named: "OnboardingC", in: Bundle(for: type(of: self)), compatibleWith: nil)
+            page?.backgroundColor = #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)
             break;
         case 3:
-            page.title.isHidden = true
-            page.subTitle.text = "Zabierz szczęśliwca do domu..."
-            page.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+            page?.titleLabel.text = " "
+            page?.subTitleLabel.text = "Zabierz szczęśliwca do domu..."
+            page?.image.image = UIImage(named: "OnboardingD", in: Bundle(for: type(of: self)), compatibleWith: nil)
+            page?.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
             break;
         default:
-            page.title.isHidden = true
-            page.subTitle.text = "...albo daj mu się zaprowadzić"
-            page.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+            page?.titleLabel.text = " "
+            page?.subTitleLabel.text = "...albo daj mu się zaprowadzić"
+            page?.image.image = UIImage(named: "OnboardingE", in: Bundle(for: type(of: self)), compatibleWith: nil)
+            page?.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
         }
         
         return page

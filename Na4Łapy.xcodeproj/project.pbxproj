@@ -72,6 +72,8 @@
 		DCEFCADF1E8FFF5C007F8B16 /* SheltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEFCADE1E8FFF5C007F8B16 /* SheltersViewController.swift */; };
 		EA9887201EC8F0D50014C614 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA98871F1EC8F0D50014C614 /* OnboardingViewController.swift */; };
 		EA9887221EC8F1220014C614 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9887211EC8F1220014C614 /* Onboarding.storyboard */; };
+		EA9887261ECF04110014C614 /* OnboardingPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9887251ECF04110014C614 /* OnboardingPage.xib */; };
+		EA9887281ECF04700014C614 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9887271ECF04700014C614 /* OnboardingPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +159,8 @@
 		DCEFCADE1E8FFF5C007F8B16 /* SheltersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheltersViewController.swift; sourceTree = "<group>"; };
 		EA98871F1EC8F0D50014C614 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnboardingViewController.swift; path = Onboarding/OnboardingViewController.swift; sourceTree = "<group>"; };
 		EA9887211EC8F1220014C614 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Onboarding.storyboard; path = Onboarding/Onboarding.storyboard; sourceTree = "<group>"; };
+		EA9887251ECF04110014C614 /* OnboardingPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OnboardingPage.xib; path = Onboarding/OnboardingPage.xib; sourceTree = "<group>"; };
+		EA9887271ECF04700014C614 /* OnboardingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnboardingPage.swift; path = Onboarding/OnboardingPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -380,6 +384,8 @@
 		EA98871E1EC8F09A0014C614 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				EA9887271ECF04700014C614 /* OnboardingPage.swift */,
+				EA9887251ECF04110014C614 /* OnboardingPage.xib */,
 				EA98871F1EC8F0D50014C614 /* OnboardingViewController.swift */,
 				EA9887211EC8F1220014C614 /* Onboarding.storyboard */,
 			);
@@ -508,6 +514,7 @@
 				5CCD46B91D04C6E600D2D672 /* LaunchScreen.storyboard in Resources */,
 				DC2A08001DE62880006D9723 /* FavouriteTableHeader.xib in Resources */,
 				04E3081B1D44BCE400A822BF /* Localizable.strings in Resources */,
+				EA9887261ECF04110014C614 /* OnboardingPage.xib in Resources */,
 				040BDF3E1D1F187100A46FB1 /* Localizable.stringsdict in Resources */,
 				5CCD46B61D04C6E600D2D672 /* Assets.xcassets in Resources */,
 				EA9887221EC8F1220014C614 /* Onboarding.storyboard in Resources */,
@@ -722,6 +729,7 @@
 				DC2A08021DE628B1006D9723 /* FavouriteTableHeader.swift in Sources */,
 				04C22B281D47D16B000E7AC3 /* CounterView.swift in Sources */,
 				042F97F41D35899F00FE1961 /* AnimalPhotoCell.swift in Sources */,
+				EA9887281ECF04700014C614 /* OnboardingPage.swift in Sources */,
 				042AF0F01D28179900FC8175 /* CenterCellCollectionViewFlowLayout.swift in Sources */,
 				04EE02B11D3118B600E8EEB7 /* AnimalDetailViewController.swift in Sources */,
 				5C0A9B061DCCD27B0091B193 /* FavouriteViewController.swift in Sources */,
